@@ -1,0 +1,25 @@
+0.
+I just ran the file 0 like ./0 and it gave me the secret 0.
+1.
+I personally lost the file and I had to retrive it back from the gradescope and change the
+permission of file so that it is executable file and after doing that I ran ltrace on file 
+and converted hexadecimal number which was above the puts to decimal and I was able to open
+my secret from there and it gave me the secret 1.
+2.
+I just ran the file 0 like ./0 and it gave me The password is the "CURLcode" without quotes
+if the call to curl_easy_perform was successful. Hint: has the pattern "X_X". So, when I searched
+on google searched about curl_easy_perform as TA told me to do that and he gave hint by saying
+figure out what does it return and this is what I thought it might be and it worked because it is
+the return statement for the curl_easy_perform and it gave me the secret 2.
+3.
+So, when I ran this file it said that we have to create a special file and I created one file
+named special file but it didn't run and then I did strace ./3 and in that it said that stat or the
+file name should be iamspecial or it will return check failed. So, I created file with that name and
+then when I ran it told me that correct rights for the file file where failed and to solve that
+problem I ran chmod +x 3 and then I ran ./3 and it gave me the secret 3.
+4.
+So, first when I ran ./4 file it gave me an error saying no shared library file lib361.so, to make this
+I had to make lib361.c and lib361.h and run gcc -c -Wall -Werror -fpic lib361.c and then we ran
+$ gcc -shared -o lib361.so lib361.o and I ran export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH and then I
+did ltrace ./4 and that gave me the info about what it should return and create the function on that
+information and then I ran ./4 and it gave me the secret 4.
